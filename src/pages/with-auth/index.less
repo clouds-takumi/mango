@@ -1,25 +1,40 @@
 .wrapper {
-  display: flex;
-  height: 90vh;
+  display   : flex;
+  height    : 90vh;
+  background: #ebf5fc;
+
+  :global {
+    .ant-menu-item-selected a {
+      color: #483d8b;
+    }
+
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      background: #ffffff;
+    }
+
+    .ant-menu-vertical {
+      background: #ebf5fc;
+    }
+  }
 }
 
 .sidebar {
-  width: 160px;
-  height: 100%;
-  background: #f6f7fa;
-  border-right: 1px solid #483d8b;
-  flex-shrink: 0;
+  width          : 160px;
+  height         : 100%;
+  // background  : #ebf5fc;
+  border-right   : 1px solid #483d8b;
+  flex-shrink    : 0;
 
   .menu {
-    color: 'inherit';
-    display: flex;
+    color          : 'inherit';
+    display        : flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
   }
 
 }
 
 .content {
-  flex-grow: 1;
+  flex-grow : 1;
   background: #fff;
 }

@@ -1,8 +1,10 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
 body {
   margin: 0;
-  color: #202d40;
+  color : #202d40;
 }
