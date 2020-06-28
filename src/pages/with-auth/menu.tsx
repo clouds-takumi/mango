@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { HomeOutlined, ChromeOutlined } from '@ant-design/icons';
+import { HomeOutlined, ChromeOutlined, WindowsOutlined } from '@ant-design/icons';
 
 type IMenu = {
     key: string;
@@ -12,13 +12,19 @@ const menuData: Array<IMenu> = [
     {
         key: 'home',
         title: 'homepage',
-        name: '主页',
+        name: 'home',
         icon: <HomeOutlined />,
     },
     {
+        key: 'button',
+        title: 'button',
+        name: 'button',
+        icon: <WindowsOutlined />,
+    },
+    {
         key: 'table',
-        title: 'homepage',
-        name: '表格',
+        title: 'table',
+        name: 'table',
         icon: <ChromeOutlined />,
     },
 ];

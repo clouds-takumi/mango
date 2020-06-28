@@ -21,6 +21,10 @@ const config: IConfig = {
               component: '../pages/with-auth/Home'
             },
             {
+              path: '/button',
+              component: '../pages/with-auth/button'
+            },
+            {
               path: '/table',
               component: '../pages/with-auth/table'
             },

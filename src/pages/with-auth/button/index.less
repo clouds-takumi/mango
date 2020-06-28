@@ -1,0 +1,120 @@
+@defaultValue: rgb(184, 157, 157);
+
+.root {
+    margin         : 0;
+    padding        : 10px 20px;
+    height         : 100%;
+    background     : #ebf5fc;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.btnGroup {
+    height         : 500px;
+    width          : 300px;
+    border-radius  : 10px;
+    box-shadow     : -2px -2px 5px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-wrap      : wrap;
+}
+
+.item {
+    margin-right: 10px;
+}
+
+.icon {
+    position: relative;
+    cursor  : pointer;
+
+    & input[type="checkbox"] {
+        position: absolute;
+        opacity : 0;
+    }
+
+    & .iconBox {
+        width          : 80px;
+        height         : 80px;
+        background     : #ebf5fc;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        box-shadow     :
+            -2px -2px 5px rgba(255, 255, 255, 1),
+            3px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        & .fa {
+            font-size: 24px;
+            color    : #6a9bd8;
+        }
+
+    }
+
+    & :checked~.iconBox {
+        box-shadow:
+            inset -2px -2px 5px rgba(255, 255, 255, 1),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+        & .fa {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.iconRoot {
+    color     : hsl(210deg, 10%, 30%);
+    opacity   : 30;
+    color     : #ffffff;
+}
+
+.iconWrap {
+    position  : absolute;
+    top       : 50vh;
+    left      : 28vw;
+    width     : 400px;
+    height    : 300px;
+    max-width : 80vw;
+    max-height: 80vh;
+    transform : translate(-50%, -50%);
+    padding   : .5rem;
+}
+
+.neumorphic {
+    border-radius  : 1rem;
+    background     : var(--color, @defaultValue);
+    animation      : 1s calc(var(--opacity) * -.01s) 1 paused both opacify;
+    backdrop-filter: blur(1.5rem);
+    border         : 1px solid rgba(#fff, .2);
+    box-shadow     :
+        -.25rem -.25rem .5rem rgba(#fff, .07),
+        .25rem .25rem .5rem rgba(#000, .12),
+        -.75rem -.75rem 1.75rem rgba(#fff, .07),
+        .75rem .75rem 1.75rem rgba(#000, .12),
+        inset 8rem 8rem 8rem rgba(#000, .05),
+        inset -8rem -8rem 8rem rgba(#fff, .05);
+}
+
+@keyframes opacify {
+    to {
+        background: transparent;
+    }
+}
+
+.neumorphicX {
+    width        : 1rem;
+    height       : 1rem;
+    border       : 0;
+    padding      : 0;
+    border-radius: 50%;
+    display      : block;
+    border       : 1px solid rgba(#fff, .5);
+    cursor       : pointer;
+    overflow     : hidden;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    opacity: 0;
+}
