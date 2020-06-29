@@ -1,0 +1,48 @@
+@defaultValue: rgb(184, 157, 157);
+
+.btnRoot {
+    display: inline-block;
+}
+
+.item {
+    display: inline-block;
+}
+
+.icon {
+    position   : relative;
+    cursor     : pointer;
+    user-select: none;
+
+    & input[type="checkbox"] {
+        position: absolute;
+        opacity : 0;
+    }
+
+    & .iconBox {
+        padding        : 4px 15px;
+        background     : #ebf5fc;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        box-shadow     :
+            -2px -2px 5px rgba(255, 255, 255, 1),
+            3px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 7px;
+
+        & .fa {
+            font-size: 14px;
+            color    : #6a9bd8;
+        }
+
+    }
+
+    & :checked~.iconBox {
+        box-shadow:
+            inset -2px -2px 5px rgba(255, 255, 255, 1),
+            inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+        & .fa {
+            transform: scale(0.95);
+        }
+    }
+}
