@@ -20,7 +20,6 @@ interface BaseButtonProps {
 
 const Button: React.FC<BaseButtonProps> = props => {
     const { type, shape, size, className, children, onClick } = props;
-    console.log(className);
     const handleClick = (e: React.MouseEvent<HTMLInputElement | HTMLAnchorElement>) => {
         if (onClick) {
             (onClick as React.MouseEventHandler<HTMLInputElement | HTMLAnchorElement>)(e);
